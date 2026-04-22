@@ -71,6 +71,15 @@ pipx install graphifyy && graphify install
 pip install graphifyy && graphify install
 ```
 
+> **Installing from source (e.g. for CatPaw support or unreleased features):** If you cloned the repo directly, install from the local source instead of PyPI so the CLI picks up your local changes:
+> ```bash
+> uv tool install . --force
+> # or with pipx
+> pipx install . --force
+> # or plain pip
+> pip install -e .
+> ```
+
 > **Official package:** The PyPI package is named `graphifyy` (install with `pip install graphifyy`). Other packages named `graphify*` on PyPI are not affiliated with this project. The only official repository is [safishamsi/graphify](https://github.com/safishamsi/graphify). The CLI and skill command are still `graphify`.
 
 > **`graphify: command not found`?** Use `uv tool install graphifyy` (recommended) or `pipx install graphifyy` — both put the CLI in a managed location that's automatically on PATH. With plain `pip`, you may need to add `~/.local/bin` (Linux) or `~/Library/Python/3.x/bin` (Mac) to your PATH, or run `python -m graphify` instead. On Windows, pip scripts land in `%APPDATA%\Python\PythonXY\Scripts`.
@@ -93,7 +102,7 @@ pip install graphifyy && graphify install
 | Gemini CLI | `graphify install --platform gemini` |
 | Hermes | `graphify install --platform hermes` |
 | Kiro IDE/CLI | `graphify kiro install` |
-| CatPaw | `graphify install --platform catpaw` |
+| CatPaw | `graphify catpaw install` |
 | Cursor | `graphify cursor install` |
 | Google Antigravity | `graphify antigravity install` |
 
